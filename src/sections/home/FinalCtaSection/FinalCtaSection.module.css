@@ -1,0 +1,23 @@
+.section { padding-block: clamp(2rem, 6vw, 5rem) clamp(5rem, 9vw, 8rem); }
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid rgba(25,232,255,.22);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(25,232,255,.11), transparent 30%),
+    linear-gradient(140deg, rgba(9,35,67,.94), rgba(2,11,23,.96));
+  box-shadow: var(--shadow-deep), var(--glow-blue);
+}
+
+:global(html[data-theme='light']) .card {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(0,145,184,.1), transparent 30%),
+    linear-gradient(140deg, rgba(255,255,255,.95), rgba(232,240,248,.92));
+}
+.card::after { content: ''; position: absolute; width: 260px; height: 260px; inset-inline-end: -120px; bottom: -120px; border: 1px solid rgba(25,232,255,.2); transform: rotate(45deg); }
+.card h2 { position: relative; z-index: 1; max-width: 900px; margin-bottom: 1rem; font-size: clamp(2.1rem, 5vw, 4.5rem); line-height: 1; }
+.card p { position: relative; z-index: 1; max-width: 720px; margin-bottom: 1.5rem; }
+.card > *:not(.lines) { position: relative; z-index: 2; }
+.lines { position: absolute; inset: 0; opacity: .25; background-image: linear-gradient(115deg, transparent 0 66%, rgba(25,232,255,.18) 66.1% 66.25%, transparent 66.35%); }

@@ -1,0 +1,41 @@
+.form {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-2));
+  box-shadow: var(--shadow-deep);
+}
+.heading { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.6rem; }
+.heading h2 { margin-bottom: .35rem; font-size: 1.45rem; }
+.heading p { margin-bottom: 0; font-size: .9rem; }
+.icon { flex: 0 0 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 12px; color: var(--cyan); background: rgba(0,104,255,.08); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.full { grid-column: 1 / -1; }
+.field { display: grid; gap: .5rem; color: var(--text-soft); font-size: .78rem; font-weight: 700; }
+.field b { color: var(--cyan); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  border: 1px solid rgba(131, 174, 204, .18);
+  border-radius: 11px;
+  color: var(--text);
+  background: var(--surface-input);
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.field input, .field select { min-height: 48px; padding: .78rem .9rem; }
+.field textarea { resize: vertical; min-height: 160px; padding: .9rem; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(25,232,255,.08); background: var(--surface-input-focus); }
+.field small { color: var(--danger); font-weight: 600; }
+.field select option { background: var(--surface-solid); color: var(--text); }
+.actions { display: flex; align-items: center; gap: 1rem; margin-top: 1.2rem; }
+.submit { min-height: 50px; display: inline-flex; align-items: center; gap: .6rem; padding: .8rem 1.1rem; border: 0; border-radius: 11px; color: #00111c; background: linear-gradient(135deg, #e5fdff, var(--cyan) 50%, #56a7ff); font-weight: 800; cursor: pointer; }
+.actions > span { color: var(--text-muted); font-size: .75rem; }
+.status { display: grid; gap: .25rem; margin-top: 1rem; padding: .9rem 1rem; border: 1px solid rgba(98,230,184,.22); border-radius: 10px; background: rgba(98,230,184,.06); }
+.status strong { color: var(--success); font-size: .82rem; }
+.status span { color: var(--text-muted); font-size: .75rem; }
+@media (max-width: 650px) {
+  .grid { grid-template-columns: 1fr; }
+  .full { grid-column: auto; }
+  .actions { align-items: flex-start; flex-direction: column; }
+  .submit { width: 100%; justify-content: center; }
+}

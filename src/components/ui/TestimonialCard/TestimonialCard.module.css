@@ -1,0 +1,16 @@
+.card {
+  margin: 0;
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, var(--surface-1), var(--surface-2));
+}
+.quoteIcon { color: var(--cyan); margin-bottom: 1rem; }
+.card blockquote { margin: 0 0 1.5rem; color: var(--text); font-size: 1rem; line-height: 1.75; }
+.card figcaption { display: flex; align-items: center; gap: .75rem; }
+.card figcaption img, .avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.avatar { display: grid; place-items: center; border: 1px solid var(--line-strong); color: var(--cyan); background: rgba(0,104,255,.08); font-weight: 800; }
+.card figcaption div { display: grid; gap: .15rem; }
+.card figcaption strong { font-size: .82rem; }
+.card figcaption span { color: var(--text-muted); font-size: .72rem; }

@@ -1,0 +1,18 @@
+.strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-chip);
+  overflow: hidden;
+}
+.stat { padding: 1.25rem 1.4rem; border-inline-end: 1px solid var(--line); }
+.stat:last-child { border-inline-end: 0; }
+.stat strong { display: block; margin-bottom: .2rem; color: var(--text); font-size: clamp(1.35rem, 2.5vw, 2.2rem); letter-spacing: -.05em; }
+.stat span { color: var(--text-muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .09em; }
+html[dir='rtl'] .stat span { letter-spacing: 0; }
+@media (max-width: 620px) {
+  .strip { grid-template-columns: 1fr; }
+  .stat { border-inline-end: 0; border-bottom: 1px solid var(--line); }
+  .stat:last-child { border-bottom: 0; }
+}

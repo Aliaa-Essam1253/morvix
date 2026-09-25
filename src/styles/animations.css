@@ -1,0 +1,19 @@
+@keyframes float-soft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-1deg); }
+  50% { transform: translate3d(0, -12px, 0) rotate(1deg); }
+}
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: .42; transform: scale(.96); }
+  50% { opacity: .75; transform: scale(1.04); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  20%, 80% { opacity: .45; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
